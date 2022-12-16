@@ -1,0 +1,14 @@
+<h1>  Tên cây thuốc: <%= @cay_thuoc_nams.ten %></h1>
+
+<h6>  Mô tả cây thuốc: <%= @cay_thuoc_nams.chitiet %></h6>
+<h6>  Số lượng: <%= @cay_thuoc_nams.soluong %></h6>
+<h6>  Giá thành cây thuốc: <%= @cay_thuoc_nams.giathanh %></h6>
+
+<ul>
+  <li><%= link_to "Edit", edit_cay_thuoc_nam_path(@cay_thuoc_nams) %></li>
+
+  <li><%= link_to "Destroy", cay_thuoc_nam_path(@cay_thuoc_nams), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
