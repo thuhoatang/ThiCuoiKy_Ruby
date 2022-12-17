@@ -26,22 +26,22 @@ class CayThuocNamsController < ApplicationController
   end
 
   def edit
-    @article = Article.find(params[:id])
+    @cay_thuoc_nam = CayThuocNam.find(params[:id])
   end
 
   def update
-    @article = Article.find(params[:id])
+    @cay_thuoc_nam = CayThuocNam.find(params[:id])
 
-    if @article.update(article_params)
-      redirect_to @article
+    if @cay_thuoc_nam.update(cay_thuoc_nam_params)
+      redirect_to @cay_thuoc_nam
     else
       render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy
-    @article = Article.find(params[:id])
-    @article.destroy
+    @cay_thuoc_nam = CayThuocNam.find(params[:id])
+    @cay_thuoc_nam.destroy
 
     redirect_to root_path, status: :see_other
   end
@@ -50,6 +50,6 @@ class CayThuocNamsController < ApplicationController
 
   private
     def cay_thuoc_nam_params
-      params.require(:cay_thuoc_nam).permit(:ten, :chitiet, :giathanh, :soluong)
+      params.require(:cay_thuoc_nam).permit(:ten, :chitiet, :giathanh, :soluong, :maula, :duoctinh, :luuy, :noitrong)
     end
 end

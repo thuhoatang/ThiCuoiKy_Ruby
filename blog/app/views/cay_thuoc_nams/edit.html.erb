@@ -1,21 +1,63 @@
-<%= form_with model: @article do |form| %>
-    <div>
-      <%= form.label :title %><br>
-      <%= form.text_field :title %>
-      <% @article.errors.full_messages_for(:title).each do |message| %>
+<%= form_with model: @cay_thuoc_nam do |form| %>
+  <div class="d-flex justify-content-around">
+  <div>
+      <span>Tên cây</span><br>
+      <%= form.text_field :ten %>
+      <% @cay_thuoc_nam.errors.full_messages_for(:title).each do |message| %>
         <div><%= message %></div>
       <% end %>
     </div>
   
     <div>
-      <%= form.label :body %><br>
-      <%= form.text_area :body %><br>
-      <% @article.errors.full_messages_for(:body).each do |message| %>
+    <span>Chi tiết cây</span><br>
+      <%= form.text_area :chitiet %><br>
+      <% @cay_thuoc_nam.errors.full_messages_for(:body).each do |message| %>
         <div><%= message %></div>
       <% end %>
     </div>
-  
+
     <div>
+    <span>Màu lá</span><br>
+      <%= form.text_field :maula %><br>
+      <% @cay_thuoc_nam.errors.full_messages_for(:maula).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  </div>
+    
+
+
+  <div class="d-flex justify-content-around">
+  <div>
+  <span>Dược tính</span><br>
+    <%= form.text_field :duoctinh %><br>
+    <% @cay_thuoc_nam.errors.full_messages_for(:duoctinh).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+
+  <div>
+  <span>Lưu ý</span><br>
+    <%= form.text_field :luuy %><br>
+    <% @cay_thuoc_nam.errors.full_messages_for(:luuy).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+  <span>Nơi trồng</span><br>
+    <%= form.text_field :noitrong %><br>
+    <% @cay_thuoc_nam.errors.full_messages_for(:noitrong).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  
+  </div>
+
+    
+
+    <div class="m-5">
       <%= form.submit %>
     </div>
   <% end %>

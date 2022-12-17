@@ -23,6 +23,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_16_154237) do
     t.text "chitiet"
     t.integer "giathanh"
     t.integer "soluong"
+    t.integer "tongtien"
+    t.text "maula"
+    t.text "duoctinh"
+    t.text "luuy"
+    t.text "noitrong"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

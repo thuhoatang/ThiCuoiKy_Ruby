@@ -1,5 +1,5 @@
 
-<p>Bang du lieu</p>
+<h4>Bảng dữ liệu Cây thuốc nam</h4>
 
 
 <table class="table">
@@ -8,10 +8,13 @@
       <th scope="col">ID</th>
       <th scope="col">Tên cây thuốc</th>
       <th scope="col">Chi tiết cây</th>
-      <th scope="col">Số lượng</th>
-      <th scope="col">Giá thành</th>
-      <th scope="col">Chỉnh sửa</th>
 
+      <th scope="col">Màu sắc cây</th>
+      <th scope="col">Dược tính</th>
+      <th scope="col">Lưu ý sử dụng</th>
+      <th scope="col">Nơi trồng</th>
+
+      <th scope="col">Chỉnh sửa</th>
       <th scope="col">Xóa</th>
     </tr>
   </thead>
@@ -25,13 +28,14 @@
       </a>
       </td>
       <td><%= caythuoc.chitiet %></td>
+      <td><%= caythuoc.maula %></td>
+      <td><%= caythuoc.duoctinh %></td>
+      <td><%= caythuoc.luuy %></td>
+      <td><%= caythuoc.noitrong %></td>
 
-      <td><%= caythuoc.soluong %></td>
 
-      <td><%= caythuoc.giathanh %></td>
-
-      <td><%= link_to "Edit", edit_cay_thuoc_nam_path(caythuoc) %></td>
-      <td><%= link_to "Dele", cay_thuoc_nam_path(caythuoc), data: {
+      <td><%= link_to "Chỉnh sửa", edit_cay_thuoc_nam_path(caythuoc) %></td>
+      <td><%= link_to "Xóa", cay_thuoc_nam_path(caythuoc), data: {
         turbo_method: :delete,
         turbo_confirm: "Are you sure?"
       } %></td>

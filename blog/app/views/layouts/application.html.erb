@@ -13,7 +13,7 @@
     
     <body>
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
       </li>
     </ul>
 
-    <form action="/articles" method="get" class="form-inline my-2 my-lg-0">
+    <form action="/cay_thuoc_nams" method="get" class="form-inline my-2 my-lg-0">
       <input name="demo" value='<%= @demo %>' class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
       <button class="btn btn-outline-white my-2 my-sm-0" type="submit">Tìm kiếm</button>
     </form>
@@ -46,10 +46,10 @@
 
   <div class="container">
   <% if user_signed_in? %> 
- <div> Welcome <%= current_user.email %> </div> 
-  <%= button_to "Sign out", destroy_user_session_path, method: :delete %> 
+ <div> Xin chào bạn:  <%= current_user.email %> đã đến với trang web của chúng tôi!</div> 
+  <%= button_to "Đăng xuất", destroy_user_session_path, method: :delete, :class=>'btn btn-outline-success' %> 
 <% else %>
-  <%= button_to "Sign in", new_user_session_path %> 
+    <a style="margin-left : 10px" class="btn btn-outline-success" href="/users/sign_in">Đăng nhập</a> 
 <% end %>
 
   <p class="notice"><%= notice %></p> 

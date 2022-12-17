@@ -2,26 +2,37 @@
 
 <%= form_with model: @cay_thuoc_nams do |form| %>
   <div class="form-group">
-    <label for="exampleFormControlInput1">Title</label>
-    <input name="cay_thuoc_nam[ten]" type="text" class="form-control" id="exampleFormControlInput1" placeholder="typing...">
+    <label for="exampleFormControlInput1">  <b>Tên cây thuốc</b></label>
+    <input name="cay_thuoc_nam[ten]" type="text" class="form-control" id="exampleFormControlInput1" placeholder="nhập tên...">
   </div>
 
   <div class="form-group">
-  <label for="exampleFormControlTextarea1">Body </label>
+  <label for="exampleFormControlTextarea1"> <b>Mô tả chi tiết cây</b></label>
   <textarea name="cay_thuoc_nam[chitiet]" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 </div>
 
 <div class="form-group">
-  <label for="exampleFormControlTextarea1">Số lượng </label>
-  <input name="cay_thuoc_nam[soluong]" type="number" class="form-control" id="exampleFormControlInput1" placeholder="typing...">
+  <label for="exampleFormControlTextarea1"> <b>Màu sắc cây</b></label>
+  <input name="cay_thuoc_nam[maula]" type="text" class="form-control" id="exampleFormControlInput1" placeholder="typing...">
 </div>
 
 <div class="form-group">
-  <label for="exampleFormControlTextarea1">Giá thành </label>
-  <input name="cay_thuoc_nam[giathanh]" type="number" class="form-control" id="exampleFormControlInput1" placeholder="typing...">
+  <label for="exampleFormControlTextarea1"><b>Dược tính</b></label>
+  <input name="cay_thuoc_nam[duoctinh]" type="text" class="form-control" id="exampleFormControlInput1" placeholder="typing...">
 </div>
 
-  <div>
+<div class="form-group">
+  <label for="exampleFormControlTextarea1"><b>Lưu ý sử dụng</b></label>
+  <input name="cay_thuoc_nam[luuy]" type="text" class="form-control" id="exampleFormControlInput1" placeholder="typing...">
+</div>
+
+<div class="form-group">
+  <label for="exampleFormControlTextarea1"><b>Nơi trồng</b></label>
+  <input name="cay_thuoc_nam[noitrong]" type="text" class="form-control" id="exampleFormControlInput1" placeholder="typing...">
+</div>
+
+
+  <div class="my-5">
     <%= form.submit %>
   </div>
 <% end %>

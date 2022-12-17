@@ -5,7 +5,11 @@ class CreateCayThuocNams < ActiveRecord::Migration[7.0]
       t.text :chitiet
       t.integer :giathanh
       t.integer :soluong
-
+      t.integer :tongtien
+      t.text :maula
+      t.text :duoctinh
+      t.text :luuy
+      t.text :noitrong
       t.timestamps
     end
   end
